@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Input</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; }
+        .form-container { max-width: 450px; margin: auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="number"], select { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { width: 100%; background-color: #007bff; color: white; padding: 10px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Enter Regional Data</h2>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label>Rainfall Level (mm):</label>
+                <input type="number" name="rainfall" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label>River Stage Height (m):</label>
+                <input type="number" name="river_hd" step="0.1" required>
+            </div>
+            <button type="submit">Analyze Risk Status</button>
+        </form>
+    </div>
+</body>
+</html>
+
